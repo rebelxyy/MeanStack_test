@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="controller.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body ng-app="mainApp"  >
+<div class="container">
+  <div ng-controller="listCtrl as list">
+        <div class="row">
+            <div class="col-sm-6" ng-repeat="element in list.data">
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img ng-src="{{element.image_url}}" alt="" class="img-rounded img-responsive" />
+                        </div>
+                        <div class="col-md-6">
+                            <h4>  {{ element.name}}</h4>
+                            <p>  <strong> type :  </strong> {{element.type}}</p>
+                            <button class="btn btn-primary pull-right"> More info !</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+    <script src="controller.js"></script>
+</body>
+</html>
