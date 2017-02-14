@@ -1,0 +1,14 @@
+var app = angular.module("app",[]);
+
+app.controller("CTRL",function ($scope){
+        $scope.Test = function(){
+            if( $scope.passwd == "admin"  && $scope.pseudo == "admin"){
+                $scope.hello = " you are in !! "
+            }
+            else{
+                $scope.hello = " get out ! "
+            }
+        }
+
+    }
+)
